@@ -52,9 +52,10 @@
 <div class="container">
   <main>
     <div class="py-5 text-center">
-      <img class="d-block mx-auto mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-      <h2>Checkout form</h2>
-      <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+      <img class="d-block mx-auto mb-4" src="./resources/logoform.jpg" alt="logo" width="500">
+      <hr class="my-4">
+      <h2>Formulario</h2>
+      <p class="lead">Rellenando este formulario, nos pondremos en contacto con usted en relación a la tarifa seleccionada. Muchas gracias por su participación y esperamos que Alonso gane el mundial.</p>
     </div>
 
     <div class="row g-5">
@@ -96,33 +97,47 @@
 
 
             <div class="col-md-5">
-              <label for="country" class="form-label">Pais</label>
+              <label for="country" class="form-label">País</label>
               <select class="form-select" id="country" required>
-                <option value="">Choose...</option>
-                <option>United States</option>
+                <option value="">Escoge</option>
+                <option>España</option>
+                <option>Portugal</option>
+                <option>Andorra</option>
+                <option>Otro</option>
               </select>
               <div class="invalid-feedback">
-                Please select a valid country.
+                Por favor escoge un país válido.
               </div>
             </div>
 
             <div class="col-md-4">
-              <label for="state" class="form-label">State</label>
-              <select class="form-select" id="state" required>
-                <option value="">Choose...</option>
-                <option>California</option>
-              </select>
+              <label for="state" class="form-label">Estado/Provincia</label>
+              <input type="text" class="form-control" id="state" placeholder="" required>
               <div class="invalid-feedback">
-                Please provide a valid state.
+                Por favor escoge un estado válido.
               </div>
             </div>
 
             <div class="col-md-3">
-              <label for="zip" class="form-label">Zip</label>
+              <label for="zip" class="form-label">Código postal</label>
               <input type="text" class="form-control" id="zip" placeholder="" required>
               <div class="invalid-feedback">
-                Zip code required.
+                Es necesario introducir un ZIP
               </div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label for="tarifa" class="form-label">Tarifa</label>
+            <select class="form-select" id="tarifa" required>
+              <option value="">Escoge</option>
+              <option>Plan de ahorro dos tramos</option>
+              <option>Plan de ahorro tres tramos</option>
+              <option>Plan elige 8 horas</option>
+              <option>Otro</option>
+            </select>
+            <div class="invalid-feedback">
+              Por favor escoge un plan válido.
             </div>
           </div>
 
@@ -130,82 +145,25 @@
 
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="same-address">
-            <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+            <label class="form-check-label" for="same-address">Deseo recibir información promocional</label>
           </div>
 
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="save-info">
-            <label class="form-check-label" for="save-info">Save this information for next time</label>
+            <label class="form-check-label" for="save-info">Deseo recibir comunicaciones acerca de empresas relacionadas con Iberdrola, con la posibilidad de recibir códigos promocionales.</label>
           </div>
-
           <hr class="my-4">
-
-          <h4 class="mb-3">Payment</h4>
-
-          <div class="my-3">
-            <div class="form-check">
-              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
-              <label class="form-check-label" for="credit">Credit card</label>
-            </div>
-            <div class="form-check">
-              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
-              <label class="form-check-label" for="debit">Debit card</label>
-            </div>
-            <div class="form-check">
-              <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
-              <label class="form-check-label" for="paypal">PayPal</label>
-            </div>
-          </div>
-
-          <div class="row gy-3">
-            <div class="col-md-6">
-              <label for="cc-name" class="form-label">Name on card</label>
-              <input type="text" class="form-control" id="cc-name" placeholder="" required>
-              <small class="text-muted">Full name as displayed on card</small>
-              <div class="invalid-feedback">
-                Name on card is required
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <label for="cc-number" class="form-label">Credit card number</label>
-              <input type="text" class="form-control" id="cc-number" placeholder="" required>
-              <div class="invalid-feedback">
-                Credit card number is required
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <label for="cc-expiration" class="form-label">Expiration</label>
-              <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-              <div class="invalid-feedback">
-                Expiration date required
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <label for="cc-cvv" class="form-label">CVV</label>
-              <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-              <div class="invalid-feedback">
-                Security code required
-              </div>
-            </div>
-          </div>
-
-          <hr class="my-4">
-
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Enviar formulario</button>
         </form>
       </div>
     </div>
   </main>
 
   <footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">&copy; 2017–2021 Company Name</p>
+    <p class="mb-1">&copy; Iberdrola 1492-2022</p>
     <ul class="list-inline">
-      <li class="list-inline-item"><a href="#">Privacy</a></li>
-      <li class="list-inline-item"><a href="#">Terms</a></li>
-      <li class="list-inline-item"><a href="#">Support</a></li>
+      <li class="list-inline-item"><a href="https://www.iberdrola.es/informacion/politica-privacidad">Privacidad</a></li>
+      <li class="list-inline-item"><a href="https://www.iberdrola.es/02sice/images/CondicionesLegalesG.pdf">Términos y condiciones</a></li>
     </ul>
   </footer>
 </div>
